@@ -7,5 +7,6 @@ units and displays the equivalent fuel efficiency in Canadian units.
 
 def exercise_11():
   conversion = 235.215
-  mpg = float(input("Insert fuel effiency value here (MPG): "))
-  print("Fuel efficiency (converted to litres per 100km): " + str(conversion / mpg))
+  mpg = int(input("Input fuel efficiency (in miles per galleon): "))
+  print("The fuel efficiency (converted to litres per 100km) is " + str(conversion / mpg))
+  #return (conversion / mpg)
