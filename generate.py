@@ -141,7 +141,7 @@ def generate_8(column):
     print(display)
   print(filler * column)
   
-def generate_9():
+def generate_9(column):
   """
   1 space:
   xxx
@@ -153,15 +153,19 @@ def generate_9():
   x--x
   xxxx
   3 spaces:
+  xxxxx
+  x---x
+  x---x
+  x---x
+  xxxxx
   """
-  space_count = int(input("Enter number of spaces: "))
   display = ""
-  display += (filler * (space_count + 2))
-  for i in range(space_count):
+  display += (filler * (column + 2))
+  for i in range(column):
     display += "\n"
     display += filler
-    display += (" " * space_count)
+    display += (" " * column)
     display += filler
   display += "\n"
-  display += (filler * (space_count + 2))
+  display += (filler * (column + 2))
   print(display)

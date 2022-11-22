@@ -29,7 +29,7 @@ def calc_factorial():
 
 # Question 10
 def validate_check(isbn):
-  if len(isbn) != 9 or not isbn.isnumeric() or isbn.isspace():
+  if len(isbn) != 9 or not isbn.isnumeric() or isbn.isspace() or isbn == Null:
     return True
   else:
     return False
