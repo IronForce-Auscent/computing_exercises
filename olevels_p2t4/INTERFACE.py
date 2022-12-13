@@ -52,3 +52,12 @@ def main():
     print(decrypt(message, int(key)))
   else:
     print("Invalid mode selected")
+
+
+"""
+To run the code:
+
+import INTERFACE
+
+INTERFACE.main()
+"""
