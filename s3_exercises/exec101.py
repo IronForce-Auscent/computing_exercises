@@ -8,5 +8,10 @@ Hint: In Exercise 75 you wrote a program for computing the greatest common divis
 may find that code useful when completing this exercise.
 """
 
-def exercise_101():
-  
+def exercise_101(num, den):
+  d = num if num < den else den
+  while num % d != 0 or den % d != 0:
+    d -= 1
+  num /= d
+  den /= d
+  print(f"{num}/{den}")
