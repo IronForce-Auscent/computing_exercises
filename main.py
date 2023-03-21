@@ -1,3 +1,3 @@
-from s3_exercises.exec97 import exercise_97 as exec97
+from s3_exercises.exec95 import exercise_95 as exec95
 
-print(exec97())
+print(exec95())
