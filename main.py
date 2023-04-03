@@ -1,3 +1,4 @@
-from s3_exercises.exec95 import exercise_95 as exec95
+from utils import generate_samples
 
-print(exec95())
+print(type(generate_samples.generate_alphabet()))
+print(generate_samples.generate_random_numbers(25, 10, 100))
