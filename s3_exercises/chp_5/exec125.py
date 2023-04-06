@@ -9,47 +9,14 @@ as its only parameters. It should return True if and only if smaller is a sublis
 demonstrates your function.
 """
 
-def exercise_125():
-  smaller = []
-  larger = []
-  user_input = input("Enter an entry (sublist): ")
-  while user_input != "0":
-    user_input.replace(" ", "")
-    if user_input != "":
-      smaller.append(user_input)
-    user_input = input("Enter another entry (sublist): ")
-  user_input = input("Enter an entry (main list): ")
-  while user_input != "0":
-    user_input.replace(" ", "")
-    if user_input != "":
-      larger.append(user_input)
-    user_input = input("Enter another entry (main list): ")
-  print(smaller)
-  print(larger)
-  print(isSublist(smaller, larger))
-
-
-def isSublist(smaller, larger):
-  if smaller == []:
-    return True
-  for entry in smaller:
-    if entry in larger and len(smaller) > 1:
-      entry_index = larger.index(entry)
-      current_index = smaller.index(entry)
-      print(entry)
-      print(entry_index)
-      print(current_index)
-      next_char = ""
-      if current_index == 0:
-        next_char = smaller[current_index + 1]
-      else:
-        next_char = smaller[current_index - 1]
-      print(next_char)
-      if (larger.index(next_char) - 1) != entry_index or (larger.index(next_char) + 1) != entry_index:
-        return False
-      else:
-        return True  
-    elif entry in larger and len(smaller) == 1:
-      return True
+def exercise_125(smaller: list, larger: list) -> bool:
+    if smaller == [] or smaller == []:
+        # Checks if the smaller list is empty, or is the same as the larger list
+        return True
+    elif len(smaller) == 1 and smaller in larger:
+        return True
     else:
-      return False
+        if set(smaller).issubset(set(larger)):
+            return True
+        else:
+            return False
