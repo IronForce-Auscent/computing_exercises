@@ -1,6 +1,6 @@
-from s3_exercises.exec20 import exercise_20 as exec20
+from s3_exercises.exec27 import exercise_27 as exec27
 
-print(exec20(12, 20000000, 20, "celsius"))
+print(exec27(1.74, 83))
 
 """import random
 a,b,c,d = [5, 17, -8], [-13, 19], [6, -9, 10, 0], [-14, 7] # input().split(","), input().split(","),input().split(",").input().split(",")
