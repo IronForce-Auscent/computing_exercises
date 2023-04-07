@@ -33,6 +33,7 @@ def merge_sort(to_sort: list) -> list:
             to_sort[k] = second_half[j]
             j += 1
             k += 1
+    return to_sort
 
 
 def test_merge_sort():
