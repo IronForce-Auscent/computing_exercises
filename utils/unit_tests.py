@@ -13,7 +13,7 @@ class UnitTest():
         self.upper_alphabet = generate_samples.generate_alphabet()['list-format']['uppercase']
         self.lower_alphabet = generate_samples.generate_alphabet()['list-format']['uppercase']
     
-    def assert_equals(self, code_to_test: function, expected_result) -> str:
+    def assert_equals(self, code_to_test, expected_result) -> str:
         """
         Checks if the result of a function is the same as the expected result, and returns the runtime (in millseconds)
 
@@ -27,17 +27,38 @@ class UnitTest():
             - Test failed, no errors: "Expected (result x), got (result y) instead with runtime of x ms"
             - Test passed: "Test passed with runtime of x ms
         """
-        test_res, res = "", ""
+        test_res = ""
         try:
             start_time = datetime.datetime.now()
             test_res = code_to_test()
         except Exception as e:
-            res = f"Returned error {e}"
+            return f"Returned error {e}"
         else:
             end_time = datetime.datetime.now()
             delta = end_time - start_time
             if test_res == expected_result:
-                res = f"Test passed with runtime of {delta.total_seconds() * 1000} ms"
+                return f"Test passed with runtime of {delta.total_seconds() * 1000} ms"
             else:
-                res = f"Expected \'{expected_result}\', got \'{test_res}\' instead with runtime of {delta.total_seconds() * 1000} ms"
-        return res
+                return f"Expected \'{expected_result}\', got \'{test_res}\' instead with runtime of {delta.total_seconds() * 1000} ms"
+    
+    def check_runtime(self, code_to_test) -> str:
+        """
+        Test a function's runtime without checking the result
+
+        Arguments:
+        code_to_test (func): The function that is being tested, code must have at least 1 "return" function to return the result from the code
+
+        Returns:
+        res (str): Returns 1 of 2 possible results
+            - Exception/error has occured: "Returned error x"
+            - Test passed: "Code executed successfully with runtime of x ms
+        """
+        try:
+            start_time = datetime.datetime.now()
+            code_to_test()
+        except Exception as e:
+            return f"Returned error {e}"
+        else:
+            end_time = datetime.datetime.now()
+            delta = end_time - start_time
+            return f"Code executed successfully with runtime of {delta.total_seconds() * 1000} ms"
