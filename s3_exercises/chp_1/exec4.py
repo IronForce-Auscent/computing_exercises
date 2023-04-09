@@ -4,8 +4,8 @@ the program may generate and display "invze".
 """
 import random
 
-def exercise_4():
-  string = ""
+def generate_random_string():
+  response = ""
   for i in range(4):
-    string += chr(random.randint(97, 122))
-  print(string)
+    response += chr(random.randint(97, 122))
+  print(response)

@@ -9,6 +9,6 @@ received for returning those containers. Format the output so that it includes a
 sign and always displays exactly two decimal places.
 """
 
-def exercise_5(small: int, large: int):
+def calculate_refund(small: int, large: int):
     cost = round(small * 0.1 + large * 0.25, 2)
-    return f"${cost}"
+    print(f"${cost}")

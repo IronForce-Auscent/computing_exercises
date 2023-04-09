@@ -6,5 +6,5 @@ decimal place.
 """
 from math import pi, pow
 
-def exercise_18(radius: float, height: float):
-    return round(pi * pow(radius, 2) * height)
+def calculate_cylinder_volume(radius: float, height: float):
+    print(f"The volume of the cylinder is {round(pi * pow(radius, 2) * height)} units cubed")

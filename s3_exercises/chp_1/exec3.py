@@ -4,8 +4,9 @@ prints a login ID from the first four letters of the name (in lowercase) and a f
 random integer. For example, if the name entered is 'Peter Parker', the program must
 create and print a login ID which could be 'pete8041'.
 """
-def exercise_3():
+def create_login_id(name: str):
   import random
-  name = input("Input user name: ")[:4:]
-  random_int = random.randint(0, 999)
-  print(f"Your login ID is {name + str(random_int)}")
+  response = name[:4]
+  for i in range(4):
+    response += random.randint(0, 9)
+  print(response)

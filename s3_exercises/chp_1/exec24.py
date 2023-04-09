@@ -4,5 +4,5 @@ minutes, and seconds. Compute and display the total number of seconds represente
 by this duration
 """
 
-def exercise_24(days: int, hours: int, minutes: int, seconds: int):
+def convert_to_seconds(days: int, hours: int, minutes: int, seconds: int):
     return (days * 86400) + (hours * 3600) + (minutes * 60) + seconds

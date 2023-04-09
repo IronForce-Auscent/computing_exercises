@@ -10,9 +10,6 @@ displays its area.
 '''
 
 import math
-def exercise_22():
-  side1 = int(input("Input length 1 of triangle: "))
-  side2 = int(input("Input length 2 of triangle: "))
-  side3 = int(input("Input length 3 of triangle: "))
+def ccalculate_triangle_area(side1: float, side2: float, side3: float):
   s = (side1 + side2 + side3) / 2
   print("The area of the triangle is " + str(math.sqrt(s * (s - side1) * (s - side2) * (s - side3))))

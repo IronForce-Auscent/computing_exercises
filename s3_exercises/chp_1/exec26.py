@@ -6,6 +6,6 @@ the user.
 """
 from time import asctime
 
-def exercise_26():
+def get_current_datetime():
     res = f"Current day: {asctime()}"
     return res

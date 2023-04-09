@@ -8,6 +8,7 @@ class UnitTest():
 
     Functions:
     assert_equals: runs a given function, then checks if the result obtains is the same as the expected result or not, as well as the runtime (in milliseconds)
+    calculate_runtime: calculates the runtime for a given function
     """
     def __init__(self):
         self.upper_alphabet = generate_samples.generate_alphabet()['list-format']['uppercase']
@@ -26,6 +27,9 @@ class UnitTest():
             - Exception/error has occured: "Returned error x"
             - Test failed, no errors: "Expected (result x), got (result y) instead with runtime of x ms"
             - Test passed: "Test passed with runtime of x ms
+        
+            
+        Credits to Codewars for giving me this idea btw :)
         """
         test_res = ""
         try:
@@ -41,9 +45,9 @@ class UnitTest():
             else:
                 return f"Expected \'{expected_result}\', got \'{test_res}\' instead with runtime of {delta.total_seconds() * 1000} ms"
     
-    def check_runtime(self, code_to_test) -> str:
+    def calculate_runtime(self, code_to_test) -> str:
         """
-        Test a function's runtime without checking the result
+        Calculates the total runtime for a given function
 
         Arguments:
         code_to_test (func): The function that is being tested, code must have at least 1 "return" function to return the result from the code

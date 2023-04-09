@@ -4,6 +4,5 @@ displays the string backwards. For example, if the string entered is "part", the
 must display "trap".
 """
 
-def exercise_1(str_input):
-   return str_input[::-1]
-    
+def invert_string(str_input: str):
+   print(str_input[::-1])  

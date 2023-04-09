@@ -5,5 +5,5 @@ the user, followed by a number of inches. Once these values are read, your progr
 should compute and display the equivalent number of centimeters.
 """
 
-def exercise_14(ft: float, inch: float):
-    return ft * 30.48 + inch * 2.54
+def imperial_to_metric(ft: float, inch: float):
+    print(f"{ft} feet and {inch} inch(es) to {ft * 30.48 + inch * 2.54} cm")

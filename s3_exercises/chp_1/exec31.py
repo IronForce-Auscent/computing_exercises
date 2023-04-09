@@ -4,8 +4,7 @@ of the digits in the number. For example, if the user enters 3141 then your prog
 should display 3+1+4+1=9.
 '''
 
-def exercise_31():
-  int_input = int(input("Input a 4-digit integer: "))
+def sum_digits(int_input: int):
   output = 0
   x = [int(a) for a in str(int_input)]
   for i in range(4):

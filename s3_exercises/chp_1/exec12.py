@@ -1,4 +1,4 @@
-'''
+"""
 The surface of the Earth is curved, and the distance between degrees of longitude
 varies with latitude. As a result, finding the distance between two points on the surface
 of the Earth is more complicated than simply using the Pythagorean theorem.
@@ -13,12 +13,8 @@ the average radius of the Earth in kilometers.)
 Create a program that allows the user to enter the latitude and longitude of two
 points on the Earth in degrees. Your program should display the distance between
 the points, following the surface of the earth, in kilometers.
-'''
+"""
 
 import math
-def exercise_12():
-  pt1_latitude = int(input("Input the latitude of point 1: "))
-  pt1_longitude = int(input("Input the longitude of point 1: "))
-  pt2_latitude = int(input("Input the latitude of point 2: "))
-  pt2_longitude = int(input("Input the longitude of point 2: "))
+def calculate_distance(pt1_latitude: int, pt1_longitude: int, pt2_latitude: int, pt2_longitude: int):
   print("The distance between these two points is " + str(6371.01 * math.acos((math.sin(pt1_latitude) * math.sin(pt2_latitude) + math.cos(pt1_latitude) * math.cos(pt2_latitude) * math.cos(pt1_longitude - pt2_longitude)))))

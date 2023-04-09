@@ -7,7 +7,7 @@ they occupy exactly two digits, with a leading 0 displayed if necessary.
 """
 from math import floor
 
-def exercise_25(seconds: int):
+def convert_to_time_format(seconds: int):
     days = floor(seconds / 86400)
     hours = floor((seconds - (days * 86400)) / 3600)
     minutes = floor((seconds - (days * 86400) - (hours * 3600)) / 60)

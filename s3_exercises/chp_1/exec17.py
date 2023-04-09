@@ -8,7 +8,7 @@ exercise, you should assume that electricity costs 8.9 cents per kilowatt-hour. 
 your program to compute the cost of boiling water for a cup of coffee.
 """
 
-def exercise_17(mass, change):
+def calculate_heating_cost(mass, change):
     HEAT_CAPACITY, JOULES_KW = 4.186, 2.777e-7
     energy = mass * change * HEAT_CAPACITY
     kwh = energy * JOULES_KW

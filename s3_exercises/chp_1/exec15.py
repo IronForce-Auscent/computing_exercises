@@ -5,7 +5,7 @@ inches, yards and miles. Use the Internet to look up the necessary conversion fa
 if you don’t have them memorized
 """
 
-def exercise_15(ft: float):
+def imperial_conversion(ft: float):
     print(f"{ft} ft to inches: {ft * 12}")
     print(f"{ft} ft to yards: {ft / 3}")
     print(f"{ft} ft to miles: {ft / 5280}")
