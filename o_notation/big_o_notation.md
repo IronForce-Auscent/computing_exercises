@@ -10,7 +10,7 @@ Wikipedia's definition of Big-O notation:
 > Big O notation is a mathematical notation that describes the limiting behavior of a function when the argument tends towards a particular value or infinity. It is a member of a family of notations invented by Paul Bachmann, Edmund Landau, and others, collectively called Bachmann–Landau notation or asymptotic notation.
 
 ## The 7 time complexities (ranked from best to worst)
-- O(1) time complexity: your code will take the same amount of time to execute every time regardless of input size 
+- (O(1))[o_1.py] time complexity: your code will take the same amount of time to execute every time regardless of input size 
     - Example: accessing the first item of a non-empty array
 - O(log n) time complexity: your code's runtime increases logarithmically (Google/ChatGPT this if you dont know what it means) relative to the input size 
     - Example: binary search algorithms
