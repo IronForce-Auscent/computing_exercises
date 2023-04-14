@@ -13,7 +13,6 @@ Challenge ID: 2c839e21375d637c
 """
 
 def convert_temperature(temperature_kelvins, to_convert):
-    # Your code here
     return False
 
 
@@ -21,7 +20,6 @@ def convert_temperature(temperature_kelvins, to_convert):
 # Test cases to check if the function works as intended
 def run_test():
     from utils.unit_tests import UnitTest
-    CHALLENGE_ID = "2c839e21375d637c"
     test = UnitTest()
 
     test.describe("Basic Tests - Fahrenheit")
@@ -39,8 +37,7 @@ def run_test():
     print(test.assert_equals(lambda: convert_temperature(1e10, "C"), 9999999726.85))
 
     test.describe("Random Tests")
-    test.assert_equals_random(convert_temperature, CHALLENGE_ID)
-
+    test.assert_equals_random(convert_temperature)
 
 if __name__ == "__main__":
     run_test()

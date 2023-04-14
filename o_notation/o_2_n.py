@@ -2,7 +2,7 @@
 This program is a representation of how an O(2 ^ n) time complexity program runs
 """
 
-def inverted_fibonacci(start_num: int) -> int:
+def inverted_fibonacci(start_num):
     if start_num <= 1:
         return start_num
     return inverted_fibonacci(start_num - 1) + inverted_fibonacci(start_num - 2)
@@ -18,3 +18,9 @@ def test_inverted_fibonacci():
     print(test.assert_equals(lambda: inverted_fibonacci(25), 75025))
     print(test.assert_equals(lambda: inverted_fibonacci(30), 832040))
     print(test.assert_equals(lambda: inverted_fibonacci(35), 9227465))
+    print(test.assert_equals(inverted_fibonacci(10), 55))
+    print(test.assert_equals(inverted_fibonacci(15), 610))
+    print(test.assert_equals(inverted_fibonacci(20), 6765))
+    print(test.assert_equals(inverted_fibonacci(25), 75025))
+    print(test.assert_equals(inverted_fibonacci(30), 832040))
+    print(test.assert_equals(inverted_fibonacci(35), 9227465))
