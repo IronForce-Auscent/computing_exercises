@@ -70,6 +70,3 @@ class UnitTest():
     def describe(self, description: str):
         # Errr....
         print(description)
-
-    def assert_equals_random(self, code_to_run, challenge_id: int):
-        return False
