@@ -11,7 +11,5 @@ regular polygon constructed from these values.
 '''
 
 import math
-def calculate_polygon_area():
-  s = int(input("Input length of polygon: "))
-  n = int(input("Input number of sides: "))
+def calculate_polygon_area(s: int, n: int):
   print(f"The area of the polygon with {n} sides is " + str((n * (s ** 2)) / 4 * math.tan(math.pi / n)))
