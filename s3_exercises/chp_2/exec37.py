@@ -6,8 +6,7 @@ up to (and including) 10 sides. If a number of sides outside of this range is en
 then your program should display an appropriate error message
 """
 
-def exercise_37():
-  sides = int(input("Enter number of sides: "))
+def exercise_37(sides: int):
   if sides == 3: print("That shape is a triangle or trigon")
   if sides == 4: print("That shape is a quadrilateral or tetragon")
   if sides == 5: print("That shape is a pentagon")

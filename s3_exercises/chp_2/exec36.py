@@ -6,9 +6,8 @@ should display a message indicating that sometimes y is a vowel, and sometimes y
 a consonant. Otherwise your program should display a message indicating that the
 letter is a consonant.
 """
-def exercise_36():
+def exercise_36(letter: str):
   vowels = ["a", "e", "i", "o", "u"]
-  letter = input("Enter a letter of the alphabet: ")
   if letter.lower() in vowels: print(f"The letter {letter} is an alphabet")
   if letter.lower() == "y": print(f"The letter {letter} can sometimes be a vowel, and other times be a consonant")
   else: print(f"The letter {letter} is a consonant")

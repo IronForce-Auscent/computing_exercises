@@ -8,4 +8,11 @@ reasonable output for a value smaller than the quietest noise in the table, and 
 value larger than the loudest noise in the table.
 """
 
-sound_level = int(input("Enter sound level: "))
+def sound_levels(decibal_level: int):
+    sounds_dict = {130: 'Jackhammer', 106: 'Gas lawnmower', 70: 'Alarm clock', 40: 'Quiet room'}
+    if decibal_level in sounds_dict:
+        print(sounds_dict[decibal_level])
+    else:
+        # list comprehension + keys() function + lambda 
+        res = sounds_dict[min(sounds_dict.keys(), key = lambda key: abs(key - decibal_level))]
+        print(f"Closest to \'{res}\'")

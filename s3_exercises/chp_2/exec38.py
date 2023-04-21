@@ -5,8 +5,8 @@ program should display the number of days in that month. Display “28 or 29 day
 for February so that leap years are addressed.
 """
 
-def exercise_38():
-  month = input("Enter a month: ").capitalize()
+def exercise_38(month: str):
+  month.capitalize()
   days_31 = "January, March, May, July, August, October, December"
   days_30 = "April, June, September, November"
   if month in days_31:
@@ -16,4 +16,4 @@ def exercise_38():
   elif month == "Feburary":
     print("28 or 29 days")
   else:
-    return 0
+    pass

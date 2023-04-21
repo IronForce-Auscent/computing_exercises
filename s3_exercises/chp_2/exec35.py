@@ -11,8 +11,7 @@ years. Your program should display an appropriate error message if the user ente
 a negative number.
 '''
 
-def exercise_35():
-  age = int(input("Input age in human years: "))
+def exercise_35(age: int):
   if age < 0: print("Invalid age inputted, please reenter a valid age")
   else:
     if age <= 2: print(f"The age in dog years is {age * 10.5}")
