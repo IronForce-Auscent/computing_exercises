@@ -1,9 +1,7 @@
 import random
 
-#Write a function to convert denary to binary number
 class Network():
     def denary_to_bin(self, decimal):
-
         conversion_table = ['0', '1']
         binary = ''
 
@@ -27,11 +25,8 @@ class Network():
     def createIPv4(self):   
         return f"{self.randomnumber(0, 255)}.{self.randomnumber(0, 255)}.{self.randomnumber(0, 255)}.{self.randomnumber(0, 255)}"
 
-    def storeIPv4(self, n):   
-        ip_addresses = []
-        for i in range(n):
-            ip_addresses.append(self.createIPv4())
-        return ip_addresses
+    def storeIPv4(self, n):
+        return [self.createIPv4() for _ in range(n)]
 
     def createIPv6(self):
         return f"{self.denary_to_hex(self.randomnumber(0, 65535))}.{self.denary_to_hex(self.randomnumber(0, 65535))}.{self.denary_to_hex(self.randomnumber(0, 65535))}.{self.denary_to_hex(self.randomnumber(0, 65535))}.{self.denary_to_hex(self.randomnumber(0, 65535))}.{self.denary_to_hex(self.randomnumber(0, 65535))}"
@@ -48,3 +43,5 @@ class Network():
 
 network = Network()
 network.network()
+ip_addresses = network.storeIPv4(10)
+print(ip_addresses)
