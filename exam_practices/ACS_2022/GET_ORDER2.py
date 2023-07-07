@@ -52,3 +52,5 @@ def get_order2():
 
     Thank you!
     """)
+
+get_order2()
