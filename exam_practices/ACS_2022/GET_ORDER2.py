@@ -38,6 +38,7 @@ def get_order2():
         choice = get_input()
         if inventory_left[choice] > 0:
             total_cost += get_price(choice)
+            inventory_left[choice] -= 1
         else:
             print("The cake is not available")
         more_order = input("More purchase? Y or N: ")
