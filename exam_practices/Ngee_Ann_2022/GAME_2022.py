@@ -14,6 +14,7 @@ def points(hand: list[str]):
     card_count = {"A": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0, "10": 0, "J": 0, "Q": 0, "K": 0}
     for card in hand:
         card_count[card[:-1]] += 1
+        
     total_points += ((card_count["J"] % 2) + (card_count["K"] % 2) + (card_count["Q"] % 2)) * 10
     total_points -= (card_count["10"] + (card_count["J"] // 2) + (card_count["Q"] // 2) + (card_count["K"] // 2))
     # Check for pairs of (1, 9), (2, 8), (3, 7), (4, 6), (5, 5)

@@ -5,3 +5,4 @@ import random
 def deal():
     return [(values[random.randint(0, len(values)-1)] + suit[random.randint(0, len(suit)-1)]) for _ in range(52)]
 
+print(deal())

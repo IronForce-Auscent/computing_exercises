@@ -8,3 +8,6 @@ def deal():
         card_suit, card_value = suit[random.randint(0, len(suit) - 1)], values[random.randint(0, len(values) - 1)]
         deck.append(card_value + card_suit)
     return deck
+
+
+print(deal())
