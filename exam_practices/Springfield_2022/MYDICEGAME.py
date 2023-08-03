@@ -8,7 +8,7 @@ while True:   # Error 1
     for j in range(3):
       dice.append(random.randint(0, 6)) # Error 9      
     dice_list.append(dice)  # Error 2     
-    print("Player {}, dice = {}" .format(i,dice))      
+    print("Player {}, dice = {}" .format(i+1,dice)) # Error 10      
 
   if max(dice_list[0]) > max(dice_list[1]):
     print("Player 1 wins!")
