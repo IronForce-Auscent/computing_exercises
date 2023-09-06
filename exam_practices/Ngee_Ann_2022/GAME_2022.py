@@ -15,13 +15,13 @@ def points(hand: list[str]):
     for card in hand:
         card_count[card[:-1]] += 1
         
-    total_points += ((card_count["J"] % 2) + (card_count["K"] % 2) + (card_count["Q"] % 2)) * 10
+    total_points += ((card_count["J"] // 2) + (card_count["K"] // 2) + (card_count["Q"] // 2)) * 10
     total_points -= (card_count["10"] + (card_count["J"] // 2) + (card_count["Q"] // 2) + (card_count["K"] // 2))
     # Check for pairs of (1, 9), (2, 8), (3, 7), (4, 6), (5, 5)
-    total_points += ((card_count["A"] - card_count["9"]) * 5) if card_count["A"] > card_count["9"] else ((card_count["9"] - card_count["A"]) * 5) if card_count["A"] < card_count["9"] else (card_count["A"] * 5)
-    total_points += ((card_count["2"] - card_count["8"]) * 5) if card_count["2"] > card_count["8"] else ((card_count["8"] - card_count["2"]) * 5) if card_count["2"] < card_count["8"] else (card_count["2"] * 5)
-    total_points += ((card_count["3"] - card_count["7"]) * 5) if card_count["3"] > card_count["7"] else ((card_count["7"] - card_count["3"]) * 5) if card_count["3"] < card_count["7"] else (card_count["3"] * 5)
-    total_points += ((card_count["4"] - card_count["6"]) * 5) if card_count["4"] > card_count["6"] else ((card_count["6"] - card_count["4"]) * 5) if card_count["4"] < card_count["6"] else (card_count["4"] * 5)
+    total_points += (card_count["9"] * 5) if card_count["A"] > card_count["9"] else (card_count["9"] * 5) if card_count["A"] < card_count["9"] else (card_count["A"] * 5)
+    total_points += (card_count["8"] * 5) if card_count["2"] > card_count["8"] else (card_count["8"] * 5) if card_count["2"] < card_count["8"] else (card_count["2"] * 5)
+    total_points += (card_count["7"] * 5) if card_count["3"] > card_count["7"] else (card_count["7"] * 5) if card_count["3"] < card_count["7"] else (card_count["3"] * 5)
+    total_points += (card_count["6"] * 5) if card_count["4"] > card_count["6"] else (card_count["6"] * 5) if card_count["4"] < card_count["6"] else (card_count["4"] * 5)
     total_points += (card_count["5"] % 2) * 5
     # Reduce points by the number of non-pairable cards
     total_points -= (abs(card_count["A"] - card_count["9"]) + abs(card_count["2"] - card_count["8"]) + abs(card_count["3"] - card_count["7"]) + abs(card_count["4"] - card_count["6"]) + (card_count["5"] // 2))
