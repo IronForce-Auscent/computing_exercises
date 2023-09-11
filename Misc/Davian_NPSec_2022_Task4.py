@@ -12,10 +12,9 @@ def deal():
     deal.append(total)
   return deal 
 
-print(deal())
 card_point = { 'J': 0,'K': 0,'Q': 0,'A': 0,'2': 0,'3': 0,'4': 0,'5': 0,'6': 0,'7': 0,'8': 0,'9': 0,'10': 0}
 
-"""
+
 def points():
   p1 = []
   p2 = []
@@ -37,4 +36,3 @@ def points():
   p2.append(number2)
 
     
-"""
